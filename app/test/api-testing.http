@@ -1,0 +1,72 @@
+
+# Auth API
+
+POST http://localhost:3000/api/auth/register HTTP/1.1
+content-type: application/json
+
+{
+    "displayName": "Miki Schumacher",
+    "password": "123456",
+    "username": "mischumacher",
+    "emailAddress": "mischumacher@f1.com"
+}
+
+###
+
+POST http://localhost:3000/api/auth/login HTTP/1.1
+Content-Type: application/json
+
+{   
+    "password": "123456",
+    "username": "mischumacher"   
+}
+
+###
+
+GET http://localhost:3000/api/auth/logout HTTP/1.1
+Content-Type: application/json
+
+###
+
+# Movies API
+GET http://localhost:3000/api/contacts/list HTTP/1.1
+Content-Type: application/json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZWQ4ODkwYTI1NjNkOTQ4YjE0MzIxYiIsImRpc3BsYXlOYW1lIjoiTWlraSBTY2h1bWFjaGVyIiwidXNlcm5hbWUiOiJtaXNjaHVtYWNoZXIiLCJpYXQiOjE2NzY1MTI0MDAsImV4cCI6MTY3NzExNzIwMH0.WMu0rsJzGc14jFQyfTnzBV8BtQ8iCftHbN3Y-A62mB4
+
+###
+GET http://localhost:3000/api/contacts/63dfdf6666391320e8e4f00c HTTP/1.1
+Content-Type: application/json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZWQ4ODkwYTI1NjNkOTQ4YjE0MzIxYiIsImRpc3BsYXlOYW1lIjoiTWlraSBTY2h1bWFjaGVyIiwidXNlcm5hbWUiOiJtaXNjaHVtYWNoZXIiLCJpYXQiOjE2NzY1MTI0MDAsImV4cCI6MTY3NzExNzIwMH0.WMu0rsJzGc14jFQyfTnzBV8BtQ8iCftHbN3Y-A62mB4
+
+
+###
+POST http://localhost:3000/api/contacts/add HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZWQ4ODkwYTI1NjNkOTQ4YjE0MzIxYiIsImRpc3BsYXlOYW1lIjoiTWlraSBTY2h1bWFjaGVyIiwidXNlcm5hbWUiOiJtaXNjaHVtYWNoZXIiLCJpYXQiOjE2NzY1MTI0MDAsImV4cCI6MTY3NzExNzIwMH0.WMu0rsJzGc14jFQyfTnzBV8BtQ8iCftHbN3Y-A62mB4
+
+
+{
+    "name": "Neverending Story 3", 
+    "email": "1978", 
+    "company": "Michael Bane",
+    "address": "Fantasy",
+    "number": 120
+}
+
+###
+PUT http://localhost:3000/api/contacts/edit/63ed8a29a2563d948b143226 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZWQ4ODkwYTI1NjNkOTQ4YjE0MzIxYiIsImRpc3BsYXlOYW1lIjoiTWlraSBTY2h1bWFjaGVyIiwidXNlcm5hbWUiOiJtaXNjaHVtYWNoZXIiLCJpYXQiOjE2NzY1MTI0MDAsImV4cCI6MTY3NzExNzIwMH0.WMu0rsJzGc14jFQyfTnzBV8BtQ8iCftHbN3Y-A62mB4
+
+{
+    "name": "Neverending Story 3", 
+    "email": "1978", 
+    "company": "Michael Bane",
+    "address": "Fantasy",
+    "number": 120
+}
+
+###
+DELETE http://localhost:3000/api/contacts/delete/63ed8a29a2563d948b143226 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZWQ4ODkwYTI1NjNkOTQ4YjE0MzIxYiIsImRpc3BsYXlOYW1lIjoiTWlraSBTY2h1bWFjaGVyIiwidXNlcm5hbWUiOiJtaXNjaHVtYWNoZXIiLCJpYXQiOjE2NzY1MTI0MDAsImV4cCI6MTY3NzExNzIwMH0.WMu0rsJzGc14jFQyfTnzBV8BtQ8iCftHbN3Y-A62mB4

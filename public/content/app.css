@@ -1,0 +1,74 @@
+body {
+    width: 100%;
+    align-items : center;
+    height: 100%;
+     background-color: white;
+  
+    /* Background image is centered vertically and horizontally at all times */
+    background-position: center center;
+  
+    /* Background image doesn't tile */
+    background-repeat: no-repeat;
+  
+    /* Background image is fixed in the viewport so that it doesn't move when 
+    the content's height is greater than the image's height */
+    background-attachment: fixed;
+  
+    /* This is what makes the background image rescale based
+    on the container's size */
+    background-size: cover;
+  
+    /* Set a background color that will be displayed
+    while the background image is loading */
+    
+    overflow: hidden;
+    /* Location of the image */
+    background-image:url("/public/images/b1.jpeg") ;
+  
+  }
+ 
+  
+  nav {
+  background-color: white;
+  }
+  h2 {background-color: wheat;
+    border: 1px 1px 1px 1px;
+    border-color: black;
+    margin: 0px 175px 0px 175px;
+  text-align: center;
+  }
+  section{background-color: white;
+    margin-right: 150px;
+    margin-left: 150px;
+    font-size: x-large;
+    text-align: center;
+    overflow: scroll; /* Show scrollbars */
+  
+  }
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border-style: solid;
+  }
+  h2.solid {border-style: solid;}
+  section.solid {border-style: solid;}
+  
+  .panel
+  {
+    margin-left:auto;
+    margin-right: auto;
+    height: min-content;
+    width: min-content;
+  }
+  
+  footer
+  {
+    font-size:small;
+    text-align:center;
+    height:50px;
+    background-color:black;
+    clear: both;
+  
+  }

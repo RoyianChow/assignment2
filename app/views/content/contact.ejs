@@ -1,0 +1,52 @@
+
+<div class="container-fluid"></div>
+<br />
+<h2 class="solid"><%= title %></h2>
+
+<br />
+<section class="solid">
+  <aside class="solid">
+    <div class="panel">
+      <div class="panel panel-default">
+        <div class="panel-heading">Contact me</div>
+        <div class="panel-body">
+            <form method="post" action="/contact">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+                <input type="submit" value="Send">
+        </div>
+      </div>
+    </div>
+
+    <br />
+  </aside>
+</section>
+
+<script>
+
+app.post('/contact', (req, res) => {
+	// Get form data
+	const name = req.body.name;
+	const email = req.body.email;
+	const message = req.body.message;
+
+	// Create a JSON object with the form data
+	const formData = {
+		name: name,
+		email: email,
+		message: message
+	};
+
+	// Do something with the form data (e.g. store it in a database, send it in an email, etc.)
+
+	res.send('Form data received');
+});
+
+</script>
+<%# created a function to store input into a json object %>
+
+<br /><br />

@@ -19,11 +19,11 @@
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
   workflow_dispatch:
 
 env:
-  AZURE_WEBAPP_NAME: comp229-w23-401    # set this to your application's name
+  AZURE_WEBAPP_NAME: portfolioA2    # set this to your application's name
   AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
   NODE_VERSION: '18.x'                # set this to the node version to use
 
